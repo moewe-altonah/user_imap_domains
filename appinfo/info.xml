@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+	<id>user_imap_domains</id>
+	<name>IMAP Multi-Domain Login</name>
+	<summary>IMAP authentication with per-domain group and quota assignment</summary>
+	<description><![CDATA[IMAP authentication backend that maps email domains to different IMAP servers.
+
+Users who log in for the first time are created automatically, added to the configured Nextcloud groups and get a default quota. All settings are managed by administrators in the admin settings or via `occ`.
+
+No other app is needed. Users of the app *External user authentication* (`user_external`) can be imported.]]></description>
+	<version>1.0.0</version>
+	<licence>mit</licence>
+	<author></author>
+	<namespace>UserImapDomains</namespace>
+	<types>
+		<prelogin/>
+		<authentication/>
+	</types>
+	<documentation>
+  <admin>https://github.com/moewe-altonah/user_imap_domains</admin>
+	</documentation>
+	<category>tools</category>
+	<category>integration</category>
+  <bugs>https://github.com/moewe-altonah/user_imap_domains/issues</bugs>
+	<dependencies>
+		<php min-version="8.2"/>
+		<lib>curl</lib>
+		<lib>mbstring</lib>
+		<nextcloud min-version="32" max-version="35"/>
+	</dependencies>
+	<commands>
+		<command>OCA\UserImapDomains\Command\MigrateBackend</command>
+	</commands>
+	<settings>
+		<admin>OCA\UserImapDomains\Settings\AdminSettings</admin>
+		<admin-section>OCA\UserImapDomains\Settings\AdminSection</admin-section>
+	</settings>
+</info>

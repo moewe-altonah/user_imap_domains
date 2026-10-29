@@ -1,0 +1,37 @@
+{
+  "name": "user_imap_domains",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Admin settings frontend of the Nextcloud app IMAP Multi-Domain Login",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "vite --mode production build",
+    "dev": "vite --mode development build",
+    "watch": "vite --mode development build --watch"
+  },
+  "browserslist": [
+    "extends @nextcloud/browserslist-config"
+  ],
+  "engines": {
+    "node": "^24.0.0",
+    "npm": "^11.0.0"
+  },
+  "dependencies": {
+    "@nextcloud/axios": "^2.6.0",
+    "@nextcloud/dialogs": "^7.5.0",
+    "@nextcloud/initial-state": "^3.0.0",
+    "@nextcloud/l10n": "^3.4.1",
+    "@nextcloud/password-confirmation": "^6.2.1",
+    "@nextcloud/router": "^3.2.0",
+    "@nextcloud/vue": "^9.13.1",
+    "vue": "^3.5.44"
+  },
+  "devDependencies": {
+    "@nextcloud/browserslist-config": "^3.1.2",
+    "@nextcloud/vite-config": "^2.5.4",
+    "sass": "^1.105.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.7"
+  }
+}
