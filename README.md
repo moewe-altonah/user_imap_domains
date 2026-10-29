@@ -123,7 +123,7 @@ Exit codes of the command: `0` success, `1` invalid input or no `users_external`
 ## Development
 
 - `lib/`: PHP code. `Backend/ImapUserBackend.php` is the user backend, `Db/UserStore.php` its storage, `Model/DomainMapping.php` normalizes all mapping data.
-- `src/`: admin settings in Vue 3 with `@nextcloud/vue`, built to `js/` with `npm run build` (or `npm run watch`).
+- `src/`: admin settings in Vue 3 with `@nextcloud/vue`, built to `js/` with `npm run build` (or `npm run watch`). The build output in `js/` is not tracked in git.
 
 ## License
 
